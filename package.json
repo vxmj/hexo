@@ -13,7 +13,10 @@
     "eslint": "eslint lib test",
     "test": "mocha test/scripts/**/*.ts --require ts-node/register",
     "test-cov": "c8 --reporter=lcovonly npm test -- --no-parallel",
-    "prepare": "husky"
+    "prepare": "husky",
+    
+    // ✅ 新增 Pages 一键部署构建命令
+    "build:pages": "tsc -b && npx hexo clean && npx hexo generate"
   },
   "files": [
     "dist/",
